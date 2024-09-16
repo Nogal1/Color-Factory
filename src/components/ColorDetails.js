@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
+import '../App.css';
 
 function ColorDetails({ colors }) {
   const { color } = useParams();

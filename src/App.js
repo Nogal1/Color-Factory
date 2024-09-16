@@ -4,6 +4,7 @@ import ColorList from "./components/ColorList";
 import ColorDetails from "./components/ColorDetails";
 import NewColorForm from "./components/NewColorForm";
 import Nav from "./components/Nav";
+import './App.css';
 
 function App() {
   const [colors, setColors] = useState(() => {
@@ -26,7 +27,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <>
       <Nav />
       <Routes>
         <Route path="/colors" element={<ColorList colors={colors} />} />
@@ -34,7 +35,7 @@ function App() {
         <Route path="/colors/:color" element={<ColorDetails colors={colors} />} />
         <Route path="*" element={<Navigate to="/colors" />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 
